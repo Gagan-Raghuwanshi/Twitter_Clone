@@ -37,12 +37,12 @@ app.use(cors(corsOptions))
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/tweet",tweetRoute);
 
-// app.get("/home",(req,res)=>{
-//     res.status(201).json({
-//         message:"comming from backend",
-//         success:true
-//     })
-// })
+ app.get("/home",(req,res)=>{
+     res.status(201).json({
+         message:"comming from backend",
+         success:true
+     })
+ })
 
 app.listen(process.env.PORT,()=>{
     console.log(`Server is Listen at port ${process.env.PORT} `)
